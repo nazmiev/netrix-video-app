@@ -1,0 +1,50 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  --grid-cols: "auto";
+  --grid-rows: auto;
+}
+
+@media (min-width: 700px) {
+  #root {
+    --grid-cols: auto 200px;
+    --grid-rows: 62vh;
+  }
+}
+
+.myapp {
+  display: grid;
+  grid-template-columns: var(--grid-cols);
+  grid-template-rows: var(--grid-rows)
+}
+
+.video-container {
+  position: relative;
+}
+
+.video {
+  width: 100%;
+}
+
+.rectangle {
+  position: absolute;
+  background-color: rgba(0, 255, 0, .7)
+}
+
+.aside {
+  overflow-y: auto;
+  padding: 5px;
+}
+
+.seek {
+  cursor: pointer;
+  background-color: lightgray;
+  margin-bottom: 5px;
+}
+
+.seek:hover {
+  background-color: gray;
+  color: white;
+}
